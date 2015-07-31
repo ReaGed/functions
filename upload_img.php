@@ -24,7 +24,7 @@ function upload_img($IMG, $ID = false, $PATH = 'images', $EXT = 'png'){
 		$_PATH = $_SERVER['DOCUMENT_ROOT'] . "/{$PATH}/{$IMG}{$EXT}";
 	}
 	
-	if(!is_writable($_PATH)){return "Права на папку ты забыл :3";}
+	if(!is_writable($_PATH)){return "The rights to the folder you've forgotten: 3";}
 	
 	$allowedExts = array("jpg", "jpeg", "gif", "png", "JPG", "JPEG", "GIF", "PNG");
 	if (in_array(end(explode(".", $_FILES["{$IMG}"]["name"])), $allowedExts)) {
@@ -36,7 +36,7 @@ function upload_img($IMG, $ID = false, $PATH = 'images', $EXT = 'png'){
 			}
 			return true;
 		} else {
-			return "Ошибка загрузки файла <b>{$IMG}</b>";
+			return "Error loading file <b>{$IMG}</b>";
 		}
 	}
 }

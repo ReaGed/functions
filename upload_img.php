@@ -1,3 +1,20 @@
+/**
+* Upload images from _POST request
+* 
+ *param Type [post name image] [Required]
+ *param Type [ID picture] [optional]
+ *param Type [path to save the image] [optional]
+ *param Type [extension under which the stored image] [optional]
+ *return True [if no errors]
+*/
+
+/**
+Example of use:
+$UPL_INFO = upload_img('img_name' , $id , 'upl_images', 'jpg');
+if(!$UPL_INFO)exit($UPL_INFO);
+*/
+
+
 function upload_img($IMG, $ID = false, $PATH = 'images', $EXT = 'png'){
 	if(!isset($_FILES["{$IMG}"])){return false;}
 	
